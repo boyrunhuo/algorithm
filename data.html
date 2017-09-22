@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var sentence = "the quick brown fox jumped over the lazy dog";
+    // var words = sentence.split(" ");
+    // for(var i=0;i<words.length;++i){
+    //     console.log("word"+i+"："+words[i])
+    // }
+
+// ----------------------查是否是回文-----------------
+    // function checkPalindrom(str) {
+    //    return str == str.split('').reverse().join('');
+       
+    // }
+  
+    // var str='worddrow'
+    // console.log(str+" is a palidrom?"+checkPalindrom(str));
+
+// --------------------去重--------------
+
+//    let unique=function (arr) {
+//        let hashTable={};
+//        let hashTable2={}
+//        let data=[];
+//        let data2=[];
+//        for(let i=0,l=arr.length;i<l;i++){
+//            if(!hashTable[arr[i]]){
+//                hashTable[arr[i]]=true;
+//                data.push(arr[i]);
+//            }else{
+//               data2.push(arr[i]);
+//            }
+
+
+//        }
+
+//        for(let j=1,l=data2.length;j<l;j++){
+//            if(!hashTable[data[i]]){
+//                hashTable[data[i]]=true;//第二次出现标记true
+//            }else{
+
+//                data[i]
+//            }
+
+//        }
+//        console.log(data2);
+//       console.log(hashTable);
+//        return data;
+//    }
+//  var arr=[1,1,3,5,5,6,8,77,11,77,88,11,88,11,11,3,5,8];
+//  console.log( unique(arr));
+
+// ------------------------查重-----------------------
+// function findMaxDuplicateChar(str) {
+//     if(str.length == 1) {
+//         return str;
+//       }
+//       let charObj = {};
+//       for(let i=0;i<str.length;i++) {
+//         if(!charObj[str.charAt(i)]) {
+//             console.log(!charObj[str.charAt(i)]);//在charObj这个对象里，有五个不同的字符
+//           charObj[str.charAt(i)] = 1;
+//         }else{
+        
+//           charObj[str.charAt(i)] += 1;
+//         }
+//       }
+//     //   找最大值
+//     // let maxChar = "";
+//     // let maxValue = 1;
+//     // for(var k in charObj) {
+//     //     if(charObj[k] >= maxValue) {
+//     //       maxChar = k;
+//     //       maxValue = charObj[k];
+//     //     }
+//     //   }
+//     // console.log(maxChar);
+//     // return maxChar;
+   
+//     console.log(charObj);
+//     for(var k in charObj){
+//      if(charObj[k]>1){
+//        console.log(k+"重复了"+(charObj[k]-1) +"次");
+//     }
+//     }
+
+// }
+//   var arr="sheeeeeeellooooo"
+//   findMaxDuplicateChar(arr)
+
+
+// ----------------------冒泡--------------
+// function bubbleSort(arr) {
+//   for(let i=0,l=arr.length;i<l;i++){
+//     for(let j=i+1,l=arr.length;j<l;j++){
+//       if(arr[i]>arr[j]){
+//         let term=arr[i]
+//         arr[i]=arr[j]
+//         arr[j]=term
+//       }
+//     }
+//   }
+
+//   return arr;
+// }
+
+// var arr1=[5,1,9,2,3,11,4,0,2]
+// console.log(bubbleSort(arr1));
+
+
+
+// -----------快排----------------------------
+// function quickSort(arr) {
+//   if(arr.length<=1){
+//     return arr;
+//   }
+
+//   let leftArr = [];
+//   let rightArr = [];
+//   let q = arr[0];
+//   for(let i=1,l=arr.length;i<l;i++){
+//     if(arr[i]>arr[0]){
+//       rightArr.push(arr[i])
+//     }else {
+//       leftArr.push(arr[i]);
+//     }
+//   }
+
+//   return [].concat(quickSort(leftArr),[q],quickSort(rightArr))//concat连接3个数组，递归快排
+// }
+
+// var arr2=[5,1,3,4,7,8,6,2,5,7,11,3,9,2]
+// console.log(quickSort(arr2));
+
+
+// ------------------------不借助临时变量，进行整数交换--------------
+// function swap(a,b) {
+//   b=b-a;//算出差
+//   a=a+b;//现在的a=原来的a+差=原来的b
+//   b=a-b;//b=现在的a-差=原来的b-差=原来的a
+//   return [a,b];
+// }
+
+// console.log(swap(2,5));
+
+
+// --------------------------找出正数组的最大差值比------------------
+// function getMaxProfit(arr) {
+//   var minPrice = arr[0];
+//   var maxProfit =0;
+
+//   for(var i=0;i<arr.length;i++){
+//     var currentPrice=arr[i];
+//     minPrice=Math.min(minPrice,currentPrice);
+//     var  potentialProfit = currentPrice-minPrice;
+
+//     maxProfit=Math.max(maxProfit,potentialProfit);
+//   }
+//   return maxProfit;
+// }
+
+// var arr3=[1,0,5,3,7,88,2]
+// console.log(getMaxProfit(arr3));
+
+
+// -------------------随机生成指定长度的字符串------------
+// function randomString(n) {
+//   let str='abcdefghijklmnopqrstuvwxyz9876543210';
+//   let tmp = '',
+//       i=0,
+//       l=str.length;
+//       for(i=0;i<n;i++){
+//         tmp+=str.charAt(Math.floor(Math.random()*l))
+//       }
+//       return tmp;
+// }
+
+// var n1=8;
+// console.log(randomString(n1));
+
+
+
+
+// ------------------------getElementsByClassName------------------
+
+// function queryClassName(node, name) {  
+//   var starts = '(^|[ \n\r\t\f])',
+//        ends = '([ \n\r\t\f]|$)';
+//   var array = [],
+//         regex = new RegExp(starts + name + ends),
+//         elements = node.getElementsByTagName("*"),
+//         length = elements.length,
+//         i = 0,
+//         element;
+ 
+//     while (i < length) {
+//         element = elements[i];
+//         if (regex.test(element.className)) {
+//             array.push(element);
+//         }
+ 
+//         i += 1;
+//     }
+ 
+//     return array;
+// }
+
+</script>
+</html>
